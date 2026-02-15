@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="output.css">
   <!-- style -->
    <style>
+    body{overflow-x: hidden;
+        position: relative;}
   /* ضبط خلفية الـ Pattern الكبيرة */
         .bg-pattern-top {
             background-image: url('https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/bg-tablet-pattern.svg');
@@ -16,7 +18,7 @@
             background-position: 120% -15%;
             background-size: 800px;
         }
-
+      
         @media (max-width: 768px) {
             .bg-pattern-top {
                 background-position: 50px -100px;
@@ -33,8 +35,14 @@
         .hamburger.open .line-3 { transform: rotate(-45deg) translate(5px, -6px); }
    </style>
 </head>
-<body class="relative overflow-x-hidden">
-   <nav class="container mx-auto p-6 relative z-50">
+<body class=" overflow-x-hidden  relative bg-no-repeat 
+             bg-[url('img/bg-tablet-pattern.svg')] 
+             bg-[length:800px] 
+             bg-[position:calc(100%+150px)_-150px]
+             md:bg-[position:calc(100%+200px)_-150px]
+             max-[767px]:bg-none">
+     
+   <nav class="container mx-auto p-6 relative z-50 overflow-x-hidden ">
         <div class="flex items-center justify-between">
             <div class="pt-2">
                 <img src="img/logo.svg" alt="Manage Logo">
@@ -57,8 +65,8 @@
             </button>
         </div>
 
-        <div id="menu" class="fixed inset-0 bg-gradient-to-b from-transparent to-black/60 hidden md:hidden">
-            <div class="absolute flex flex-col items-center self-end py-8 mt-24 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-2xl rounded-sm text-darkBlue">
+        <div id="menu" class="fixed inset-0   from-transparent to-black/60 hidden md:hidden">
+            <div class="absolute flex flex-col items-center self-end py-8   space-y-6 font-bold bg-white sm:w-auto s  left-6 right-6 drop-shadow-2xl rounded-sm text-darkBlue">
                 <a href="#">Pricing</a>
                 <a href="#">Product</a>
                 <a href="#">About Us</a>
@@ -67,8 +75,8 @@
             </div>
         </div>
     </nav>
-
-    <section class=" container mx-auto flex flex-col-reverse md:flex-row items-center px-6 mt-10 space-y-0 md:space-y-0 overflow-hidden">
+ <div class="  ">
+    <section class=" container  mx-auto flex flex-col-reverse md:flex-row items-center px-6 mt-10 space-y-0 md:space-y-0 overflow-hidden ">
         <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
             <h1 class="max-w-md text-4xl font-bold text-center md:text-6xl md:text-left text-darkBlue leading-tight">
                 Bring everyone together to build better products.
@@ -80,13 +88,13 @@
                 <a href="#" class="p-3 px-8 text-white bg-orange-600   hover:bg-orange-300  bg-brightRed rounded-full shadow-lg shadow-brightRed/40 hover:bg-brightRedLight transition">Get Started</a>
             </div>
         </div>
-        <div class="md:w-1/2 overflow-hidden ">
-          <img src="img/bg-tablet-pattern.svg " class="absolute -top-24 -z-30">
+        <!-- <img src="img/bg-tablet-pattern.svg" class="absolute -top-24 -z-30 left-30"> -->
+        <div class="md:w-1/2  ">
             <img src="img/illustration-intro.svg" alt="Illustration">
         </div>
     </section>
 
-    <section class="container mx-auto flex flex-col px-4 mt-10  md:space-y-12space-y-0 md:flex-row gap-3">
+    <section class="container mx-auto flex flex-col px-4 mt-10  md:space-y-12space-y-0 md:flex-row gap-3 ">
         <div class="flex flex-col space-y-12 md:w-1/2 w-full ">
             <h2 class="  text-3xl font-bold text-center md:text-4xl md:text-left text-darkBlue">
                 What’s different about Manage?
@@ -96,7 +104,7 @@
             </p>
         </div>
 
-        <div class="flex flex-col space-y-8 md:w-1/2 relative">
+        <div class="flex flex-col space-y-8 md:w-1/2 relative ">
             <div class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
                 <div class="  bg-orange-200 md:bg-white  rounded-3xl">
                     <div class="flex items-center space-x-4">
@@ -134,10 +142,12 @@
                 </div>
             </div>
         </div>
-        <img src="img/bg-tablet-pattern.svg" class="absolute -left-100 -z-10   bottom-1">
+        <!-- <img src="img/bg-tablet-pattern.svg" class="absolute -left-100 -z-10   bottom-1"> -->
     </section>
-
-    <section class="mt-24 text-center">
+</div>
+<div class="relative">
+    <img src="img/bg-tablet-pattern.svg" class="absolute -left-100 -top-90 -z-10">
+    <section class="mt-24 text-center ">
         <h2 class="text-4xl font-bold text-darkBlue mb-24">What they’ve said</h2>
         <div class="flex flex-col md:flex-row container mx-auto px-6 space-y-24 md:space-y-0 md:space-x-6">
             <div class="relative flex flex-col items-center p-6 space-y-6 bg-veryLightGray rounded-lg md:w-1/3 shadow-sm">
@@ -172,6 +182,7 @@
             </div>
         </div>
     </section>
+</div>
 
     <footer class="bg-veryDarkBlue">
         <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
