@@ -1,11 +1,23 @@
 // Mobile Menu Logic
         const btn = document.getElementById('menu-btn');
         const nav = document.getElementById('menu');
+       const hamburger=document.querySelector('.hamburger')
+       const icon_close=document.querySelector("#icon-close")
+        hamburger.addEventListener('click', () => {
+        
+            icon_close.classList.remove('hidden') 
+            icon_close.classList.add('flex')
+            nav.classList.add("flex");
+            nav.classList.remove("hidden");
+            hamburger.classList.add('hidden')
+        });
+ icon_close.addEventListener('click', () => {
+         console.log("done")
+            nav.classList.add("hidden"); 
+            nav.classList.remove("flex");
+            hamburger.classList.remove('hidden')
+            icon_close.classList.add('hidden')
 
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('open');
-            nav.classList.toggle('flex');
-            nav.classList.toggle('hidden');
         });
 
         // Email Validation Logic (Matches image_4df7bc.png)

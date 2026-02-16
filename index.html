@@ -40,7 +40,7 @@
              bg-[length:800px] 
              bg-[position:calc(100%+150px)_-150px]
              md:bg-[position:calc(100%+200px)_-150px]
-             max-[767px]:bg-none">
+              md:bg-[position:calc(80%+100px)_-100px]">
      
    <nav class="container mx-auto p-6 relative z-50 overflow-x-hidden ">
         <div class="flex items-center justify-between">
@@ -58,10 +58,12 @@
 
             <a href="#" class="hidden md:block p-3 px-8 text-white bg-orange-600   hover:bg-orange-300 rounded-full shadow-lg shadow-brightRed/40 hover:bg-brightRedLight transition">Get Started</a>
 
-            <button id="menu-btn" class="hamburger block md:hidden focus:outline-none">
-                <span class="block w-6 h-0.5 bg-darkBlue mb-1 transition-all line-1"></span>
-                <span class="block w-6 h-0.5 bg-darkBlue mb-1 transition-all line-2"></span>
-                <span class="block w-6 h-0.5 bg-darkBlue transition-all line-3"></span>
+            <button id="menu-btn" class="hamburger  cursor-pointer md:hidden  z-10">
+                <img src="img/icon-hamburger.svg"  >
+           
+            </button>
+              <button id="icon-close" class="cursor-pointer  md:hidden e hidden z-10">
+                <img src="img/icon-close.svg"  >
             </button>
         </div>
 
@@ -184,15 +186,15 @@
     </section>
 </div>
 
-    <footer class="bg-veryDarkBlue">
+    <footer class="bg-gray-800">
         <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
             <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
                 <div class="mx-auto my-6 text-center text-white md:hidden">Copyright 2020. All Rights Reserved</div>
-                <div><img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/logo-white.svg" class="h-6" alt="Logo"></div>
+                <div><img src="img/logo.svg" class="h-6" alt="Logo"></div>
                 <div class="flex justify-center space-x-4">
-                    <a href="#"><img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/icon-facebook.svg" class="h-5 hover:invert transition" alt=""></a>
-                    <a href="#"><img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/icon-youtube.svg" class="h-5 hover:invert transition" alt=""></a>
-                    <a href="#"><img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/icon-twitter.svg" class="h-5 hover:invert transition" alt=""></a>
+                    <a href="#"><img src="img/icon-facebook.svg" class="h-5 hover:invert transition"></a>
+                    <a href="#"><img src="img/icon-youtube.svg" class="h-5 hover:invert transition" ></a>
+                    <a href="#"><img src="img/icon-twitter.svg" class="h-5 hover:invert transition" ></a>
                 </div>
             </div>
 
@@ -213,15 +215,15 @@
             <div class="flex flex-col justify-between">
                 <form id="newsletter-form" class="flex flex-col space-y-2 relative">
                     <div class="flex space-x-3">
-                        <input type="text" id="email-input" class="flex-1 px-6 py-3 rounded-full focus:outline-none border-2 border-transparent transition" placeholder="Updates in your inbox…">
-                        <button class="px-6 py-3 text-white rounded-full bg-brightRed hover:bg-brightRedLight transition uppercase font-bold text-sm">Go</button>
+                        <input type="text" id="email-input" class="bg-white flex-1 px-6 py-3 rounded-full focus:outline-none border-2 border-transparent transition" placeholder="Updates in your inbox…">
+                        <button class="px-6 py-3   rounded-full   cursor-pointer hover:bg-brightRedLight transition uppercase font-bold text-sm md:block p-3  hover:bg-white hover:text-orange-500 hover:border-orange-500 text-white bg-orange-600">Go</button>
                     </div>
-                    <span id="error-msg" class="text-brightRed text-xs italic ml-4 hidden">Please insert a valid email</span>
+                    <span id="error-msg" class="text-red-600 text-xs italic ml-4 hidden">Please insert a valid email</span>
                 </form>
-                <p class="hidden text-darkGrayishBlue text-sm md:block text-right">Copyright 2020. All Rights Reserved</p>
+                <p class="hidden text-white text-sm md:block text-right">Copyright 2020. All Rights Reserved</p>
             </div>
         </div>
     </footer>
-     <script src="index.js" defer></script>
+     <script src="index.js" ></script>
 </body>
 </html>
