@@ -39,5 +39,29 @@
                
             }
         });
+// slide x
+const slider = document.getElementById('slider');
+const dots = document.querySelectorAll('.dot');
 
-        
+slider.addEventListener('scroll', () => {
+    // حساب رقم البطاقة الظاهرة حالياً بناءً على مكان التمرير
+    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+    
+    dots.forEach((dot, i) => {
+        if (i === index) {
+            dot.classList.add('bg-brightRed');
+        } else {
+            dot.classList.remove('bg-brightRed');
+        }
+    });
+});
+
+// لجعل النقاط قابلة للضغط أيضاً
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+        slider.scrollTo({
+            left: i * slider.offsetWidth,
+            behavior: 'smooth'
+        });
+    });
+});        

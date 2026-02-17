@@ -33,6 +33,8 @@
         .hamburger.open .line-1 { transform: rotate(45deg) translate(5px, 6px); }
         .hamburger.open .line-2 { opacity: 0; }
         .hamburger.open .line-3 { transform: rotate(-45deg) translate(5px, -6px); }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
    </style>
 </head>
 <body class=" overflow-x-hidden  relative bg-no-repeat 
@@ -66,9 +68,8 @@
                 <img src="img/icon-close.svg"  >
             </button>
         </div>
-
-        <div id="menu" class="fixed inset-0   from-transparent to-black/60 hidden md:hidden">
-            <div class="absolute flex flex-col items-center self-end py-8   space-y-6 font-bold bg-white sm:w-auto s  left-6 right-6 drop-shadow-2xl rounded-sm text-darkBlue">
+<div id="menu" class="fixed inset-0   mt-20  to-black/60 hidden md:hidden">
+            <div class="absolute flex flex-col items-center   py-8   space-y-6 font-bold bg-white sm:w-auto  left-6 right-6 shadow-md rounded-sm text-darkBlue">
                 <a href="#">Pricing</a>
                 <a href="#">Product</a>
                 <a href="#">About Us</a>
@@ -76,7 +77,9 @@
                 <a href="#">Community</a>
             </div>
         </div>
+       
     </nav>
+     
  <div class="  ">
     <section class=" container  mx-auto flex flex-col-reverse md:flex-row items-center px-6 mt-10 space-y-0 md:space-y-0 overflow-hidden ">
         <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
@@ -147,44 +150,47 @@
         <!-- <img src="img/bg-tablet-pattern.svg" class="absolute -left-100 -z-10   bottom-1"> -->
     </section>
 </div>
-<div class="relative">
-    <img src="img/bg-tablet-pattern.svg" class="absolute -left-100 -top-90 -z-10">
-    <section class="mt-24 text-center ">
-        <h2 class="text-4xl font-bold text-darkBlue mb-24">What they’ve said</h2>
-        <div class="flex flex-col md:flex-row container mx-auto px-6 space-y-24 md:space-y-0 md:space-x-6">
-            <div class="relative flex flex-col items-center p-6 space-y-6 bg-veryLightGray rounded-lg md:w-1/3 shadow-sm">
-                <img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/avatar-anisha.png" class="w-16 absolute -top-8" alt="Anisha">
-                <h5 class="text-lg font-bold text-darkBlue pt-4">Anisha Li</h5>
-                <p class="text-sm text-darkGrayishBlue text-center">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
-            </div>
-            <div class="relative flex flex-col items-center p-6 space-y-6 bg-veryLightGray rounded-lg md:w-1/3 shadow-sm">
-                <img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/avatar-ali.png" class="w-16 absolute -top-8" alt="Ali">
-                <h5 class="text-lg font-bold text-darkBlue pt-4">Ali Bravo</h5>
-                <p class="text-sm text-darkGrayishBlue text-center">“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
-            </div>
-            <div class="relative hidden md:flex flex-col items-center p-6 space-y-6 bg-veryLightGray rounded-lg md:w-1/3 shadow-sm">
-                <img src="https://raw.githubusercontent.com/frontendmentor/manage-landing-page-master/master/images/avatar-richard.png" class="w-16 absolute -top-8" alt="Richard">
-                <h5 class="text-lg font-bold text-darkBlue pt-4">Richard Watts</h5>
-                <p class="text-sm text-darkGrayishBlue text-center">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
-            </div>
-        </div>
-        <div class="my-16">
-            <a href="#" class="p-3 px-8 text-white bg-orange-600   hover:bg-orange-300  bg-brightRed rounded-full shadow-lg shadow-brightRed/40 hover:bg-brightRedLight transition">Get Started</a>
-        </div>
-    </section>
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-darkBlue mb-24">What they’ve said</h2>
 
-    <section class="bg-brightRed relative overflow-hidden bg-orange-500 relative">
-        <img src="img/bg-simplify-section-desktop.svg" class="absolute">
-        <div class="container mx-auto flex flex-col items-center justify-between px-6 py-16 space-y-12 md:py-12 md:flex-row md:space-y-0 relative z-10">
-            <h2 class="text-4xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
-                Simplify how your team works today.
-            </h2>
-            <div>
-                <a href="#" class="p-3 px-10 text-orange-500 hover:saturate-50 bg-white rounded-full font-bold shadow-2xl hover:text-brightRedLight transition">Get Started</a>
-            </div>
-        </div>
-    </section>
-</div>
+    <div id="slider" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-6 pb-10">
+      
+      <div class="snap-center flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-gray-50 p-8 rounded-lg relative mt-12">
+        <img src="img/avatar-anisha.png" class="w-16 h-16 absolute -top-8 left-1/2 -translate-x-1/2" alt="Anisha">
+        <h5 class="text-lg font-bold text-darkBlue mt-4">Anisha Li</h5>
+        <p class="text-darkGrayishBlue text-sm leading-relaxed mt-4">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+      </div>
+
+      <div class="snap-center flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-gray-50 p-8 rounded-lg relative mt-12">
+        <img src="img/avatar-ali.png" class="w-16 h-16 absolute -top-8 left-1/2 -translate-x-1/2" alt="Ali">
+        <h5 class="text-lg font-bold text-darkBlue mt-4">Ali Bravo</h5>
+        <p class="text-darkGrayishBlue text-sm leading-relaxed mt-4">“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+      </div>
+
+      <div class="snap-center flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-gray-50 p-8 rounded-lg relative mt-12">
+        <img src="img/avatar-richard.png" class="w-16 h-16 absolute -top-8 left-1/2 -translate-x-1/2" alt="Richard">
+        <h5 class="text-lg font-bold text-darkBlue mt-4">Richard Watts</h5>
+        <p class="text-darkGrayishBlue text-sm leading-relaxed mt-4">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+      </div>
+      
+      <div class="snap-center flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-gray-50 p-8 rounded-lg relative mt-12">
+        <img src="img/avatar-shanai.png" class="w-16 h-16 absolute -top-8 left-1/2 -translate-x-1/2" alt="Shanai">
+        <h5 class="text-lg font-bold text-darkBlue mt-4">Shanai Gough</h5>
+        <p class="text-darkGrayishBlue text-sm leading-relaxed mt-4">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+      </div>
+    </div>
+
+    <div class="flex justify-center space-x-2 mt-4 md:hidden">
+      <div class="dot w-2.5 h-2.5 rounded-full border border-brightRed bg-brightRed transition-all"></div>
+      <div class="dot w-2.5 h-2.5 rounded-full border border-brightRed transition-all"></div>
+      <div class="dot w-2.5 h-2.5 rounded-full border border-brightRed transition-all"></div>
+      <div class="dot w-2.5 h-2.5 rounded-full border border-brightRed transition-all"></div>
+    </div>
+
+    <button class="mt-12 bg-brightRed  hover:bg-white hover:text-orange-500 cursor-pointer text-amber-50 hover:border-orange-500 bg-orange-500 px-8 py-3 rounded-full font-bold hover:opacity-80 transition shadow-lg shadow-brightRed/30">Get Started</button>
+  </div>
+</section>
 
     <footer class="bg-gray-800">
         <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
